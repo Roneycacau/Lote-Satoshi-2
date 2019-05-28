@@ -46,28 +46,30 @@ public class Indicadores {
     }
 
     void classificarSecao(Votacao[] votacao, int[][] secoes){
-        int maior = secoes[0][0];
-        int menor = secoes[0][0];
+        int maior = secoes[1][0];
+        int menor = secoes[1][0];
         String msgMaior = "Seção com menor número de votos: " + secoes[0][0]+ " (" + secoes[1][0] + ")";
         String msgMenor = "Seção com menor número de votos: " + secoes[0][0]+ " (" + secoes[1][0] + ")";
         for(int i=1;i<secoes[1].length;i++){
             if(secoes[1][i] <= menor){
-                menor = secoes[0][i];
-                msgMenor = "Seção com menor número de votos: " + menor + " (" + secoes[1][i] + ")";
+                menor = secoes[1][i];
+                msgMenor = "Seção com menor número de votos: " + secoes[0][i] + " (" + menor + ")";
             }
 
             if(secoes[1][i] >= maior){
-                maior= secoes[0][i];
-                msgMaior = "Seção com maior número de votos: " + maior + " (" + secoes[1][i] + ")";
+                maior = secoes[1][i];
+                msgMaior = "Seção com maior número de votos: " + secoes[0][i] + " (" + maior + ")";
             }
         }
         JOptionPane.showMessageDialog(null, msgMaior + "\n" + msgMenor);
 
     }
 
-    void votosPorCandidato(Votacao[] votacao){}
+    void votosPorCandidato(Votacao[] votacao, int[][] candidatos){
+        
+    }
 
-    void rankearCandidatos(Votacao[] votacao){}
+    void rankearCandidatos(Votacao[] votacao, int[][] candidatos){}
 
 
 

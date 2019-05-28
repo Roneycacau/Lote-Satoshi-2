@@ -10,7 +10,12 @@ public class Menu {
         String menssagem;
 
         do{
-            opc = Integer.parseInt(JOptionPane.showInputDialog("Selecione uma opção"));
+            opc = Integer.parseInt(JOptionPane.showInputDialog("Selecione uma opção\n" +
+                    "[1] – Carregar Seção/Número Eleitor\n" +
+                    "[2] – Classificar por Seção\n" +
+                    "[3] – Gravar Registros \n" +
+                    "[4] – Mostrar Indicadores\n" +
+                    "[9] – Finalizar"));
 
             switch (opc){
                 case 1:
