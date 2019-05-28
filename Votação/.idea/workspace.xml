@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="820daa64-7e7b-4de1-91cc-8fb38c3578cb" name="Default Changelist" comment="Indicadores iniciado.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Votacao2016.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Votacao2016.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Indicadores.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Indicadores.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MostrarIndicadores.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MostrarIndicadores.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Votacao2016.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Votacao2016.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -65,8 +61,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Indicadores.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="410">
-              <caret line="126" column="39" selection-start-line="126" selection-start-column="39" selection-end-line="126" selection-end-column="39" />
+            <state relative-caret-position="255">
+              <caret line="15" column="52" selection-start-line="15" selection-start-column="52" selection-end-line="15" selection-end-column="52" />
             </state>
           </provider>
         </entry>
@@ -125,26 +121,7 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Votacao" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Votação" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Votacao" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Votação" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="Downloaded.Files.Path.Enabled" value="false" />
@@ -201,12 +178,12 @@
       <workItem from="1558712069621" duration="3030000" />
       <workItem from="1558818588480" duration="9675000" />
       <workItem from="1558905227927" duration="20496000" />
-      <workItem from="1559058384716" duration="5996000" />
+      <workItem from="1559058384716" duration="7196000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39197000" />
+    <option name="totallyTimeSpent" value="40397000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1858" height="1096" extended-state="6" />
@@ -222,7 +199,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32917964" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.41225338" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.41225338" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -280,16 +257,6 @@
     <option name="version" value="1" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Indicadores.java</url>
-          <line>109</line>
-          <properties />
-          <option name="timeStamp" value="29" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="candidatos[i].length-1" language="JAVA" />
@@ -416,8 +383,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Indicadores.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="126" column="39" selection-start-line="126" selection-start-column="39" selection-end-line="126" selection-end-column="39" />
+        <state relative-caret-position="255">
+          <caret line="15" column="52" selection-start-line="15" selection-start-column="52" selection-end-line="15" selection-end-column="52" />
         </state>
       </provider>
     </entry>

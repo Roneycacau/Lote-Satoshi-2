@@ -126,12 +126,21 @@ public class Indicadores {
 
         System.out.println();
 
+        for(int y=0; y<=10;y++){
+            msgCandidato += " [" + String.format("%03d", candidatos[0][y])+ "]";
+        }
+        for(int y=0; y<=10;y++){
+            msgvoto += " [" + String.format("%03d", candidatos[1][y])+ "]";
+        }
+
         for(int x=0;x<candidatos.length; x++){
             for(int y=0; y<=10;y++){
-                System.out.print("[" + String.format("%03d", candidatos[x][y])+ "]");
+                System.out.print(" [" + String.format("%03d", candidatos[x][y])+ "]");
             }
             System.out.println();
         }
+
+        JOptionPane.showMessageDialog(null, msgCandidato + "\n" + msgvoto);
     }
 
 
