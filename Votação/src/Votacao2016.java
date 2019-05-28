@@ -15,7 +15,7 @@ public class Votacao2016 {
         for (int i = 0; i<votacao.length; i++){
             votacao[i].secaoVotacao = random.nextInt(10)+1;
             System.out.println(votacao[i].secaoVotacao);
-            votacao[i].numeroCandidato = random.nextInt(5)+1;
+            votacao[i].numeroCandidato = random.nextInt(300)+1;
             System.out.println(votacao[i].numeroCandidato);
         }
         return votacao;

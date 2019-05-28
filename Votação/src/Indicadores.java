@@ -34,12 +34,7 @@ public class Indicadores {
 
 
         }
-        for(int x=0;x<secoes.length; x++){
-            for(int y=0; y<secoes[x].length;y++){
-                System.out.print(secoes[x][y]);
-            }
-            System.out.println();
-        }
+
         JOptionPane.showMessageDialog(null,msgsecao + "\n" + msgvoto);
         System.out.println(msgsecao);
         System.out.println(msgvoto);
@@ -65,11 +60,79 @@ public class Indicadores {
 
     }
 
-    void votosPorCandidato(Votacao[] votacao, int[][] candidatos){
-        
+    void votosPorCandidato(int[] classificaCandidato, int[][] candidatos){
+
+        int candidato = 0, votos = 1;
+        String msgCandidato = "CANDIDATO:", msgvoto = "NUM VOTOS:";
+
+        for (int i=0; i<classificaCandidato.length; i++){
+            if(i+1>=classificaCandidato.length){
+                if(classificaCandidato[i-1] == classificaCandidato[i]){
+                    msgvoto += " |" + String.format("%03d",(votos+1)) + "|";
+                    candidatos[1][candidato] = votos+1;
+                    votos = 1;
+
+                    msgCandidato += " |" + String.format("%03d",classificaCandidato[i]) + "|";
+                    candidatos[0][candidato] = classificaCandidato[i];
+
+                }
+            }else if(classificaCandidato[i] != classificaCandidato[i+1]){
+                msgvoto += " |" + String.format("%03d",votos) + "|";
+                candidatos[1][candidato] = votos;
+                votos = 1;
+
+                msgCandidato += " |" + String.format("%03d",classificaCandidato[i]) + "|";
+                candidatos[0][candidato] = classificaCandidato[i];
+
+                candidato++;
+
+                candidatos[1][candidato] = 1;
+            }else{
+                votos++;
+            }
+
+
+        }
+
+
+        JOptionPane.showMessageDialog(null,msgCandidato + "\n" + msgvoto);
+        System.out.println(msgCandidato);
+        System.out.println(msgvoto);
     }
 
-    void rankearCandidatos(Votacao[] votacao, int[][] candidatos){}
+    void rankearCandidatos(int[] classificaCandidato, int[][] candidatos){
+        boolean troca = true;
+        int auxVoto, auxCandidato;
+        String msgCandidato = "CANDIDATO:", msgvoto = "NUM VOTOS:";
+
+        while (troca){
+            troca = false;
+            for(int i = candidatos[0].length-1; i>0; i--){
+                if(candidatos[1][i]>candidatos[1][i-1]){
+
+                    auxCandidato = candidatos[0][i];
+                    auxVoto = candidatos[1][i];
+
+                    candidatos[0][i] = candidatos[0][i-1];
+                    candidatos[1][i] = candidatos[1][i-1];
+
+                    candidatos[0][i-1] = auxCandidato;
+                    candidatos[1][i-1] = auxVoto;
+
+                    troca = true;
+                }
+            }
+        }
+
+        System.out.println();
+
+        for(int x=0;x<candidatos.length; x++){
+            for(int y=0; y<=10;y++){
+                System.out.print("[" + String.format("%03d", candidatos[x][y])+ "]");
+            }
+            System.out.println();
+        }
+    }
 
 
 

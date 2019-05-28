@@ -3,15 +3,35 @@ import javax.swing.*;
 public class MostrarIndicadores {
     Indicadores indicadores = new Indicadores();
     void menuIndicadores(Votacao[] votacao){
-        int qntSecoes = 1, qntCandidatos = 0;
+        boolean troca = true;
+        int qntSecoes = 1, qntCandidatos = 1;
+        int[] classificaCandidatos = new int[votacao.length-1];
+
         for(int i=0; i< votacao.length-1; i++){
             if(votacao[i].secaoVotacao != votacao[i+1].secaoVotacao){
                 qntSecoes++;
             }
-            if(votacao[i].numeroCandidato != votacao[i+1].numeroCandidato){
+            classificaCandidatos[i] = votacao[i].numeroCandidato;
+        }
+
+        while (troca){
+            troca = false;
+            for(int i = 0; i<classificaCandidatos.length-1; i++){
+                if(classificaCandidatos[i]>classificaCandidatos[i+1]){
+                    int aux = classificaCandidatos[i];
+                        classificaCandidatos[i] = classificaCandidatos[i+1];
+                    classificaCandidatos[i+1] = aux;
+                    troca = true;
+                }
+            }
+        }
+
+        for(int i = 0; i<classificaCandidatos.length-1; i++){
+            if(classificaCandidatos[i] != classificaCandidatos[i+1]){
                 qntCandidatos++;
             }
         }
+
         int[][] secoes = new int[2][qntSecoes];
         int[][] candidatos = new int[2][qntCandidatos];
 
@@ -33,10 +53,10 @@ public class MostrarIndicadores {
                     indicadores.classificarSecao(votacao, secoes);
                     break;
                 case 3:
-                    indicadores.votosPorCandidato(votacao,candidatos);
+                    indicadores.votosPorCandidato(classificaCandidatos,candidatos);
                     break;
                 case 4:
-                    indicadores.rankearCandidatos(votacao, candidatos);
+                    indicadores.rankearCandidatos(classificaCandidatos, candidatos);
                     break;
                 case 9:
                     break;
